@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="template.xhtml">
+
+    <ui:define name="head">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100&amp;display=swap" rel="stylesheet"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <title>web-lab-3: start page</title>
+    </ui:define>
+
+    <ui:define name="main">
+        <div class="start-page-welcome-message">
+            <h3 class="Text">Лабораторная работа №3.<br/>
+                Добро пожаловать на стартовую страницу!</h3>
+            <div class="index-menu">
+                <h:link styleClass="start-page-link-to-main" outcome="redir-main">
+                    <h4 class="Text">Перейти на основную страницу</h4>
+                </h:link>
+            </div>
+        </div>
+        <div class="clock-panel">
+            <h5 class="Text">Текущие дата и время:<br/></h5>
+            <p id="clock" class="Text"></p>
+        </div>
+        <h:outputScript library="js" name="clock.js"/>
+    </ui:define>
+
+</ui:composition>
+</html>
